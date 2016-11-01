@@ -8,7 +8,7 @@
   /** @ngInject */
   function MainController($window,$timeout, webDevTec, toastr) {
     var vm = this;
-
+    console.log("home");
   //   vm.awesomeThings = [];
   //   vm.classAnimation = '';
   //   vm.creationDate = 1476596428619;
