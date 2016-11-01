@@ -8,7 +8,7 @@
   /** @ngInject */
   function MainController($window,$timeout, webDevTec, toastr,$state) {
     var vm = this;
-    console.log("home");
+
     $state.go('index.home');
   //   vm.awesomeThings = [];
   //   vm.classAnimation = '';

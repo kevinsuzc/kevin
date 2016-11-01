@@ -4,9 +4,10 @@
 'use strict';
 
 angular.module('kevin')
-  .controller('homeController', function ($state,$window) {
+  .controller('HomeController', function ($state,$window) {
 
     var vm = this;
+    console.log("home");
 
     vm.openSchonell = function () {
       console.log("open schonell");

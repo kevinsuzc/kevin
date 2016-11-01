@@ -17,7 +17,9 @@
       })
       .state('index.home', {
         url: "/home",
-        templateUrl: "app/tpl/home.html"
+        templateUrl: "app/tpl/home.html",
+        controller: 'HomeController',
+        controllerAs: 'vm'
       });
 
     $urlRouterProvider.otherwise('');
