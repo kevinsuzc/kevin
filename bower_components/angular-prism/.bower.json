@@ -1,0 +1,35 @@
+{
+  "name": "angular-prism",
+  "homepage": "https://github.com/kevinsuzc/angular-prism",
+  "authors": [
+    "Kevin Su"
+  ],
+  "description": "A simple directive for prism",
+  "main": "src/angular-prism.js",
+  "keywords": [
+    "prism",
+    "angular"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "angular": "1.x",
+    "prism": "1.x"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "_release": "cd0ad36106",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "cd0ad3610674ace55c2b43b08d25a1676bc8ace7"
+  },
+  "_source": "https://github.com/kevinsuzc/angular-prism.git",
+  "_target": "*",
+  "_originalSource": "angular-prism",
+  "_direct": true
+}

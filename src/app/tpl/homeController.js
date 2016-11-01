@@ -8,7 +8,6 @@ angular.module('kevin')
 
     var vm = this;
     console.log("home");
-
     vm.openSchonell = function () {
       console.log("open schonell");
       $window.open('http://admin.schonell.com.sg','_blank');
