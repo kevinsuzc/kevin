@@ -20,7 +20,7 @@
         templateUrl: "app/tpl/home.html"
       });
 
-    $urlRouterProvider.otherwise('/#/home');
+    $urlRouterProvider.otherwise('');
     // $locationProvider.html5Mode(true);
   }
 

@@ -6,9 +6,10 @@
     .controller('MainController', MainController);
 
   /** @ngInject */
-  function MainController($window,$timeout, webDevTec, toastr) {
+  function MainController($window,$timeout, webDevTec, toastr,$state) {
     var vm = this;
     console.log("home");
+    $state.go('index.home');
   //   vm.awesomeThings = [];
   //   vm.classAnimation = '';
   //   vm.creationDate = 1476596428619;
@@ -35,9 +36,6 @@
   //       awesomeThing.rank = Math.random();
   //     });
   //   }
-    vm.openSchonell = function () {
-      console.log("open schonell")
-      $window.open('http://admin.schonell.com.sg','_blank');
-    }
+
   }
 })();
