@@ -20,7 +20,14 @@
         templateUrl: "app/tpl/home.html",
         controller: 'HomeController',
         controllerAs: 'vm'
+      })
+      .state('index.notes', {
+        url: "/notes",
+        templateUrl: "app/tpl/notes.html",
+        controller: 'NotesController',
+        controllerAs: 'vm'
       });
+
 
     $urlRouterProvider.otherwise('');
     // $locationProvider.html5Mode(true);
