@@ -19,7 +19,8 @@
     "animate.css": "~3.4.0",
     "angular": "~1.5.3",
     "prism": "Prism#^1.5.1",
-    "angular-prism": "*"
+    "angular-prism": "*",
+    "font-awesome": "fontawesome#^4.7.0"
   },
   "devDependencies": {
     "angular-mocks": "~1.5.3"
