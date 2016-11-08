@@ -26,7 +26,16 @@
         templateUrl: "app/tpl/notes.html",
         controller: 'NotesController',
         controllerAs: 'vm'
-      });
+      })
+      .state('index.calendar', {
+        url: "/calendar",
+        templateUrl: "app/tpl/calendar.html",
+        controller: 'CalendarController',
+        controllerAs: 'vm'
+      })
+
+
+    ;
 
 
     $urlRouterProvider.otherwise('');
