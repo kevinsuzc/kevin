@@ -1,7 +1,7 @@
 /**
  * Created by zichaosu on 2016/11/2.
  */
-// 'use strict';
+'use strict';
 // angular.module('angularPrism',[])
 //   .directive('code', function () {
 //     return {
@@ -13,3 +13,9 @@
 //       }
 //     }
 //   });
+// angular.module('kevin')
+//   .directive('calendar', function ($timeout) {
+//
+//   })
+//
+// ;
