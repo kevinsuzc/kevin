@@ -9,7 +9,12 @@
   function MainController($scope,$state) {
     var vm = this;
 
-    $state.go('index.home');
+    // console.log($state.current)
+
+    if($state.current.name == 'index'){
+      // console.log("index")
+      $state.go('index.home');
+    }
     $scope.isNavCollapsed = true;
     $scope.isCollapsed = false;
     $scope.isCollapsedHorizontal = false;
