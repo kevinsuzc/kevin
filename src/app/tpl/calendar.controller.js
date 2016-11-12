@@ -4,71 +4,30 @@
 'use strict';
 
 angular.module('kevin')
-  .controller('CalendarController', function ($scope) {
+  .controller('CalendarController', function ($scope,$uibModal) {
 
     var vm = this;
     console.log("calendar");
 
-    $scope.day = moment();
-    console.log($scope.day);
-    // $scope.selected = _removeTime($scope.selected || moment());
-    $scope.selected = $scope.day;
-    console.log($scope.selected );
-    $scope.month = $scope.selected.clone();
-    console.log($scope.month );
+    vm.click = function (day, size) {
 
-    var start = $scope.selected.clone();
-    start.date(1);
+      var modalInstance = $uibModal.open({
+        animation: true,
+        templateUrl: 'app/tpl/modal.calendarDayEvent.html',
+        controller: 'CalendarDayEventController as vm',
+        size: size,
+        backdrop: 'static',
+        resolve: {
+          day: function () {
+            return day;
+          }
+        }
+      });
+      modalInstance.result.then(function () {
 
-    _removeTime(start.day(0));
+      }, function () {
 
-    _buildMonth($scope, start, $scope.month);
-
-    $scope.select = function (day) {
-      $scope.selected = day.date;
+      });
     };
 
-    $scope.next = function () {
-      var next = $scope.month.clone();
-      _removeTime(next.month(next.month() + 1)).date(1);
-      $scope.month.month($scope.month.month() + 1);
-      _buildMonth($scope, next, $scope.month);
-    };
-
-    $scope.previous = function () {
-      var previous = $scope.month.clone();
-      _removeTime(previous.month(previous.month() - 1).date(1));
-      $scope.month.month($scope.month.month() - 1);
-      _buildMonth($scope, previous, $scope.month);
-    };
-   function _removeTime(date) {
-      return date.day(0).hour(0).minute(0).second(0).millisecond(0);
-    }
-
-    function _buildMonth(scope, start, month) {
-      scope.weeks = [];
-      var done = false, date = start.clone(), monthIndex = date.month(), count = 0;
-      while (!done) {
-        scope.weeks.push({days: _buildWeek(date.clone(), month)});
-        date.add(1, "w");
-        done = count++ > 2 && monthIndex !== date.month();
-        monthIndex = date.month();
-      }
-    }
-
-    function _buildWeek(date, month) {
-      var days = [];
-      for (var i = 0; i < 7; i++) {
-        days.push({
-          name: date.format("dd").substring(0, 1),
-          number: date.date(),
-          isCurrentMonth: date.month() === month.month(),
-          isToday: date.isSame(new Date(), "day"),
-          date: date
-        });
-        date = date.clone();
-        date.add(1, "d");
-      }
-      return days;
-    }
   });

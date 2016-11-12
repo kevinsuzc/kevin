@@ -1,0 +1,22 @@
+<div class="modal-header">
+  <h4 class="modal-title">{{vm.day.date.toString().substring(4,14)}}</h4>
+</div>
+<div class="modal-body">
+
+
+</div>
+<div class="modal-footer">
+  <div class="row">
+    <div class="col-sm-5 col-sm-offset-1">
+      <input type="button" value="Save" class=" btn btn-primary" style="width:100%" ng-click="vm.save()"
+             ng-disabled="myForm.$valid == false || vm.buttonDisable == true">
+    </div>
+
+    <div class="col-sm-5">
+      <button class="btn btn-muted" style="width:100%" ng-click="vm.cancel()">Cancel</button>
+    </div>
+
+  </div>
+
+
+</div>

@@ -9,4 +9,9 @@ angular.module('kevin')
     var vm = this;
     console.log("notes");
 
+
+    console.log(moment().date(0));
+    console.log(moment().date(1));
+    console.log(moment().day(0));
+
   });
