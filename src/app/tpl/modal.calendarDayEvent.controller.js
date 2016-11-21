@@ -10,7 +10,11 @@ angular.module('kevin')
     console.log("CalendarDayEventController");
     // console.log(day);
     // console.log(vm.day.date.toString().substring(4,14));
-
+    console.log( Date(1984, 4, 15, 19, 20));
+    console.log(moment().date())
+    $scope.user = {
+      time: new Date()
+    };
 
     vm.cancel = function () {
       $uibModalInstance.dismiss();

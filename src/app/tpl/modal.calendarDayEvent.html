@@ -3,7 +3,9 @@
 </div>
 <div class="modal-body">
 
-
+  <a href="#" editable-bstime="user.time" e-show-meridian="false" e-minute-step="10" >
+    {{ (user.time | date:"HH:mm") || 'empty' }}
+  </a>
 </div>
 <div class="modal-footer">
   <div class="row">

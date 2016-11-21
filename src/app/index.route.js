@@ -33,6 +33,12 @@
         controller: 'CalendarController',
         controllerAs: 'vm'
       })
+      .state('index.playGround', {
+        url: "/playGround",
+        templateUrl: "app/tpl/playGround.html",
+        controller: 'PlayGroundController',
+        controllerAs: 'vm'
+      })
 
 
     ;

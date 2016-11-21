@@ -15,16 +15,16 @@
 //   });
 angular.module('kevin')
   .directive('calendar', function ($timeout) {
-    return{
-      restrict:'E',
-      link:function ($scope) {
+    return {
+      restrict: 'E',
+      link: function ($scope) {
         $scope.day = moment();
         console.log($scope.day);
         // $scope.selected = _removeTime($scope.selected || moment());
         $scope.selected = $scope.day;
-        console.log($scope.selected );
+        console.log($scope.selected);
         $scope.month = $scope.selected.clone();
-        console.log($scope.month );
+        console.log($scope.month);
 
         var start = $scope.selected.clone();
         // start.date(1);
@@ -84,6 +84,34 @@ angular.module('kevin')
       }
     };
 
+  })
+  .directive('footable', function ($timeout) {
+    return {
+      restrict: 'A',
+      scope: {
+        pagingSize: '@'
+      },
+      link: function (scope, element, attributes) {
+        console.log(attributes.pagingSize);
+
+        $timeout(function () {
+          element.footable({
+            "paging": {
+              "enabled": true,
+              "position": "right",
+              "size": attributes.pagingSize
+            },
+            "sorting": {
+              "enabled": true
+            },
+            "filtering": {
+              "enabled": true
+            }
+          })
+        }, 100)
+      }
+      // console.log(ele);
+    }
   })
 
 ;

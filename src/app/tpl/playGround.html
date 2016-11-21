@@ -1,0 +1,25 @@
+<input type="text" id="filter">
+
+<table footable class="table" paging-size="3" id="table" name="status">
+  <thead>
+  <tr>
+    <th data-breakpoints="xs" data-type="number">ID</th>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th data-breakpoints="xs">Job Title</th>
+    <th data-breakpoints="xs sm" data-type="date" data-format-string="MMMM Do YYYY">Started On</th>
+    <th data-breakpoints="xs sm md" data-type="date" data-format-string="MMMM Do YYYY">Date of Birth</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr ng-repeat="data in vm.data">
+    <td>{{data.ID}}</td>
+    <td>{{data.FirstName}}</td>
+    <td>{{data.LastName}}</td>
+    <td>{{data.JobTitle}}</td>
+    <td>{{data.StartedOn}}</td>
+    <td>{{data.DateofBirth}}</td>
+  </tr>
+
+  </tbody>
+</table>
