@@ -1,7 +1,9 @@
 {
   "name": "kevin",
   "version": "0.0.0",
-  "dependencies": {},
+  "dependencies": {
+    "toastr": "^2.1.2"
+  },
   "scripts": {
     "test": "gulp test"
   },
